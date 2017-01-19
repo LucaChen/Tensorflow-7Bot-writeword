@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	android:paddingTop="@dimen/activity_vertical_margin"
+	android:paddingBottom="@dimen/activity_vertical_margin"
+	android:orientation="vertical"
+	tools:context="jp.narr.tensorflowmnist.MainActivity">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_height="250dp">
+
+		<jp.narr.tensorflowmnist.DrawView
+			android:layout_width="130dp"
+			android:layout_height="250dp"
+			android:id="@+id/view_draw"
+			android:layout_weight="1.56"/>
+
+		<LinearLayout
+			android:layout_width="200dp"
+			android:orientation="vertical"
+			android:layout_height="250dp">
+
+			<Button
+				android:text="Write_1"
+				android:layout_width="match_parent"
+				android:layout_height="30dp"
+				android:id="@+id/btn_send_1" />
+
+			<Button
+				android:text="Write_2"
+				android:layout_width="match_parent"
+				android:layout_height="30dp"
+				android:id="@+id/btn_send_2" />
+
+			<Button
+				android:text="Write_3"
+				android:layout_width="match_parent"
+				android:layout_height="30dp"
+				android:id="@+id/btn_send_3" />
+			<Button
+				android:text="Write_4"
+				android:layout_width="match_parent"
+				android:layout_height="30dp"
+				android:id="@+id/btn_send_4" />
+			<Button
+				android:text="Test"
+				android:layout_width="match_parent"
+				android:layout_height="30dp"
+				android:id="@+id/Test" />
+
+		</LinearLayout>
+		>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_height="wrap_content">
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Clear"
+			android:id="@+id/button_clear"/>
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Detect"
+			android:id="@+id/button_detect"/>
+
+		<TextView
+			android:paddingLeft="10dp"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:text=""
+			android:id="@+id/text_result"/>
+
+		<Button
+			android:text="复位1"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/btn_motor"
+			/>
+
+		<Button
+			android:text="复位2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/btn_msg_send" />
+	</LinearLayout>
+
+</LinearLayout>

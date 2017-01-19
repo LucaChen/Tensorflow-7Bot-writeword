@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/container"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id= "@+id/edit_bottombar"
+        android:layout_alignParentBottom = "true">
+
+        <Button android:id="@+id/btn_disconnect"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft ="true"
+            android:text="断开"/>
+
+        <Button android:id="@+id/btn_msg_send"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight ="true"
+            android:text="IK6Test"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保护模式"
+            android:id="@+id/btn_mode2"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MotorPosition"
+            android:id="@+id/btn_motor"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/btn_msg_send" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/frameLayout2">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Catch"
+            android:id="@+id/btn_catch"
+            android:layout_gravity="center_horizontal|top" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Release"
+            android:id="@+id/btn_release"
+            android:layout_gravity="center_horizontal|bottom" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:weightSum="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/edit_bottombar"
+        android:layout_below="@+id/seekBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/vec67"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.21" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/vec67.x"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.21"
+            android:indeterminate="false" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/vec67.y"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.21"
+            android:indeterminate="false" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/vec67.z"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.21"
+            android:indeterminate="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="坐标"
+            android:id="@+id/textView_Positive"
+            android:layout_weight="0.21" />
+
+    </LinearLayout>
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:indeterminate="false" />
+
+    <com.bluetooth.util.RockerView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/view"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
